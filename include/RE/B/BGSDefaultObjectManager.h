@@ -17,8 +17,9 @@ namespace RE
 
 		[[nodiscard]] static BGSDefaultObjectManager* GetSingleton()
 		{
-			static REL::Relocation<BGSDefaultObjectManager*> singleton{ ID::BGSDefaultObjectManager::Singleton };
-			return singleton.get();
+			using func_t = decltype(&BGSDefaultObjectManager::GetSingleton);
+			static REL::Relocation<func_t> func{ ID::BGSDefaultObjectManager::Singleton };
+			return func();
 		}
 
 		[[nodiscard]] TESForm* GetDefaultObject(DEFAULT_OBJECT a_obj) const noexcept

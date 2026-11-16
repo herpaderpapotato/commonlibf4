@@ -19,16 +19,14 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::MessageBoxData };
 
 		// members
-		BSString                                        headerText;         // 18
-		BSString                                        bodyText;           // 28
-		BSTArray<BSString>                              buttonText;         // 38
-		REX::TEnumSet<WARNING_TYPES, std::uint32_t>     warningContext;     // 50
-		BSTSmartPointer<IMessageBoxCallback>            callback;           // 58
-		REX::TEnumSet<UI_DEPTH_PRIORITY, std::uint32_t> menuDepth;          // 60
-		bool                                            modal;              // 64
-		bool                                            ensureUnique;       // 65
-		std::int32_t                                    cancelButtonIndex;  // 68
-		bool                                            hasCancelButton;    // 6C
+		BSString                                        headerText;      // 18
+		BSString                                        bodyText;        // 28
+		BSTArray<BSString>                              buttonText;      // 38
+		REX::TEnumSet<WARNING_TYPES, std::uint32_t>     warningContext;  // 50
+		BSTSmartPointer<IMessageBoxCallback>            callback;        // 58
+		REX::TEnumSet<UI_DEPTH_PRIORITY, std::uint32_t> menuDepth;       // 60
+		bool                                            modal;           // 64
+		bool                                            ensureUnique;    // 65
 	};
-	static_assert(sizeof(MessageBoxData) == 0x70);
+	static_assert(sizeof(MessageBoxData) == 0x68);
 }
