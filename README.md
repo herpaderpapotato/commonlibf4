@@ -1,5 +1,7 @@
 # CommonLibF4
 
+This is just here to make https://github.com/herpaderpapotato/Fallout-4-Flat-2-VR work.
+
 ### Requirements
 * [XMake](https://xmake.io) [3.0.0+]
 * C++23 Compiler (MSVC or Clang-CL)
